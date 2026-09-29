@@ -1,0 +1,43 @@
+{
+  "name": "bun-hono-elysia-capstone-saas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:hono": "bun --watch run src/entrypoints/api-hono.ts",
+    "dev:elysia": "bun --watch run src/entrypoints/api-elysia.ts",
+    "start:api": "bun run src/entrypoints/api.ts",
+    "start:worker": "bun run src/entrypoints/worker.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test --coverage",
+    "db:generate": "bunx drizzle-kit generate",
+    "db:migrate": "bunx drizzle-kit migrate"
+  },
+  "dependencies": {
+    "@elysiajs/eden": "^1.4.0",
+    "@elysiajs/openapi": "^1.4.0",
+    "@elysiajs/opentelemetry": "^1.4.0",
+    "@hono/otel": "^1.0.0",
+    "@hono/standard-validator": "^0.2.0",
+    "@hono/zod-openapi": "^1.5.1",
+    "@hono/zod-validator": "^0.7.0",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/sdk-node": "^0.200.0",
+    "@scalar/hono-api-reference": "^0.9.0",
+    "bullmq": "^5.77.0",
+    "drizzle-orm": "0.45.2",
+    "elysia": "1.4.30",
+    "hono": "4.13.10",
+    "jose": "^6.0.0",
+    "pino": "^9.6.0",
+    "postgres": "^3.4.5",
+    "valibot": "^1.1.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.2",
+    "drizzle-kit": "^0.31.10",
+    "typescript": "^6.0.0"
+  },
+  "trustedDependencies": []
+}
